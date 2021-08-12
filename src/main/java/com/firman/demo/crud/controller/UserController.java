@@ -57,7 +57,7 @@ public class UserController {
         @PathVariable
             Long id) {
         userService.updateUser(id, userDTO);
-        return new BaseResponseDTO();
+        return new BaseResponseDTO(null);
     }
 
     @ApiOperation(value = "Delete User", produces = "application/json")
@@ -68,7 +68,7 @@ public class UserController {
         @PathVariable
             Long id) {
         userService.deleteUser(id);
-        return new BaseResponseDTO();
+        return new BaseResponseDTO(null);
     }
 
 }
